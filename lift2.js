@@ -3,6 +3,7 @@
 //初始化
 function init(){
 	createLiftController(10);
+	// var lift = new Lift(1).buildLift(10, 1);	
 }
 //电梯构造函数
 function Lift(num){
@@ -15,8 +16,23 @@ Lift.prototype = {
     list: {
     	floors:[]
     },
-	buildLift: function(){
-		console.log('建造电梯');
+    currpos: $('.active').data('floor'),
+	buildLift: function(floornum, num){
+		var wrap = $('.lift');
+		//判断是否将已生成的电梯置空，否则电梯会多出很多
+		$('.lift-box').length >= num ?	wrap.html('') : '';
+		//生成电梯样式
+		wrap.prepend('<div class="lift-box '+ num +'" ></div>');
+		var list = $('.'+ num +'')
+		for(let i = 1; i <= floornum; i++){
+			list.prepend(function(){
+				if(i == 1){
+					return '<div class="box active" class="active" data-floor='+ i +'></div>'
+				} else {
+					return '<div class="box" data-floor='+ i +'></div>'
+				}
+			});
+		}
 	},
 	goto: function(floornum,controller){
 		//绑定this对象
@@ -43,9 +59,8 @@ Lift.prototype = {
 		var currbox=_allbox[currpos];
         $(currbox).addClass('active');
         //去掉控制按钮状态
-        if(currpos == floornum){
-        	$('#'+controller.id+'.'+controller.classList[0]).removeClass('arrow-active');
-        }
+        currpos == floornum ? $('#'+controller.id+'.'+controller.classList[0]).removeClass('arrow-active') : ''
+        
         if(currpos < $this.list.floors[$this.list.floors.length - 1]){
         	currpos++;
         }else if(currpos > $this.list.floors[$this.list.floors.length - 1]){
@@ -61,8 +76,11 @@ Lift.prototype = {
 //电梯控制中心
 function lift_controller(controller){
 	//添加控制按钮状态
-	$('#'+controller.id+'.'+controller.className).addClass('arrow-active')
-	firstlist.goto(controller.id, controller)	
+	$('#'+controller.id+'.'+controller.className).addClass('arrow-active');
+
+	console.log(lift1.currpos);
+	// console.log(lift1);
+	lift1.goto(controller.id, controller)	
 }
 //生成电梯控制单元样式
 function createLiftController(floornum){
@@ -96,11 +114,14 @@ $('.confirm').on('click' ,function(){
 	let floornum = $('.floornum').val();
 	let liftnum = $('.liftnum').val();
 	createLiftController(floornum);
+	//根据用户要求生成n部电梯
+	// for (let i = 1; i <= liftnum; i++){
+	// 	// lift = 'lift' + i;
+	// 	new Lift(i).buildLift(floornum, i);
+	// }
 });
 
 init();
-// for(let i = 0; i < 4; i++){
-// 	new Lift(i);	
-// }
-var firstlist = new Lift(1);	
+var lift1 = new Lift(1)
+lift1.buildLift(10,1)
 
