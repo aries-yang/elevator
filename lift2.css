@@ -1,0 +1,63 @@
+.lift-wrap{
+	margin: 100px auto;
+	border-top:1px solid;
+}
+.lift-controller-wrap{
+	margin-left: 100px;
+	float: left;
+}
+.lift-controller{
+	margin-bottom: 5px;
+	height: 40px;
+	line-height: 58px;
+	border: 1px solid #fff;
+}
+.num{
+	width: 20px;
+	height: 20px;
+	border: 1px solid #ff522f;
+	display: inline-block;
+	line-height: 20px;
+	text-align: center;
+	border-radius: 50%;
+}
+.up:after{
+	content: '↑';
+	width: 20px;
+	height: 20px;
+	border: 1px solid;
+	display: inline-block;
+	line-height: 20px;
+	text-align: center;
+	border-radius: 50%;
+	cursor: pointer;
+}
+.down:after{
+	content: '↓';
+	width: 20px;
+	height: 20px;
+	border: 1px solid;
+	display: inline-block;
+	line-height: 20px;
+	text-align: center;
+	border-radius: 50%;
+	cursor: pointer;
+}
+.lift-box{
+	float: left;
+	margin-left: 30px;
+	
+	
+}
+.box{
+	border: 1px solid;
+	width: 80px;
+	height: 40px;
+	margin-bottom: 5px;
+}
+.active{
+	border:1px solid #ff522f;
+}
+.arrow-active{
+	color: #ff522f;
+}

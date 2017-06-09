@@ -1,0 +1,55 @@
+.up,.down{
+	cursor: pointer;
+	padding-left: 36px;
+}
+.lift-wrap{
+	margin-top:100px;
+	position: absolute;
+}
+.lift-controller{
+	width: 200px;
+	margin-left: 300px;
+	border:1px solid;
+}
+.down{
+	
+}
+.up{
+}
+.lift-dev{
+	width:50px;
+	border:1px solid;
+	height: 332px;
+	position: absolute;
+	top:90px;
+}
+.lift-dev ul{
+	list-style: none;
+	padding:0;
+}
+.lift-dev ul li{
+	text-decoration: none;
+	height: 22px;
+	border-bottom: 1px solid;
+	width:49px;
+}
+.lift-dev1{
+	left:33%;
+}
+.lift-dev2{
+	left:44%;
+
+}
+.lift-dev3{
+	left:55%;
+
+}
+.lift-dev4{
+	left:66%;
+
+}
+.lift-box1,.lift-box2,.lift-box3,.lift-box4{
+	border:1px solid red!important;
+	position: absolute;
+	bottom:0px;
+}

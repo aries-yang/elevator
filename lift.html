@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta charset="utf-8">
+	<script type="text/javascript" src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+	<link rel="stylesheet" href="http://cdn.static.runoob.com/libs/bootstrap/3.3.7/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="lift.css">
+	<script langue="javascript" src="lift.js"></script>
+	<div class="lift-wrap">
+		<div class="lift-controller">
+			<span class="up">15</span>
+			<span class="down" onclick="lift_controller('15','down')">下</span>
+		</div>
+		<div class="lift-controller">
+			<span class="up">14</span>
+			<span class="up" onclick="lift_controller('14','up')">上</span>
+			<span class="down" onclick="lift_controller('14','down')">下</span>
+		</div>
+		<div class="lift-controller">
+			<span class="up">13</span>
+			<span class="up" onclick="lift_controller('13','up')">上</span>
+			<span class="down" onclick="lift_controller('13','down')">下</span>
+		</div>
+		<div class="lift-controller">
+			<span class="up">12</span>
+			<span class="up" onclick="lift_controller('12','up')">上</span>
+			<span class="down" onclick="lift_controller('12','down')">下</span>
+		</div>
+		<div class="lift-controller">
+			<span class="up">11</span>
+			<span class="up" onclick="lift_controller('11','up')">上</span>
+			<span class="down" onclick="lift_controller('11','down')">下</span>
+		</div>
+		<div class="lift-controller">
+			<span class="up">10</span>
+			<span class="up" onclick="lift_controller('10','up')">上</span>
+			<span class="down" onclick="lift_controller('10','down')">下</span>
+		</div>
+		<div class="lift-controller">
+			<span class="up">9</span>
+			<span class="up" onclick="lift_controller('9','up')">上</span>
+			<span class="down" onclick="lift_controller('9','down')">下</span>
+		</div>
+		<div class="lift-controller">
+			<span class="up">8</span>
+			<span class="up" onclick="lift_controller('8','up')">上</span>
+			<span class="down" onclick="lift_controller('8','down')">下</span>
+		</div>
+		<div class="lift-controller">
+			<span class="up">7</span>
+			<span class="up" onclick="lift_controller('7','up')">上</span>
+			<span class="down" onclick="lift_controller('7','down')">下</span>
+		</div>	
+		<div class="lift-controller">
+			<span class="up">6</span>
+			<span class="up" onclick="lift_controller('6','up')">上</span>
+			<span class="down" onclick="lift_controller('6','down')">下</span>
+		</div>
+		<div class="lift-controller">
+			<span class="up">5</span>
+			<span class="up" onclick="lift_controller('5','up')">上</span>
+			<span class="down" onclick="lift_controller('5','down')">下</span>
+		</div>
+		<div class="lift-controller">
+			<span class="up">4</span>
+			<span class="up" onclick="lift_controller('4','up')">上</span>
+			<span class="down" onclick="lift_controller('4','down')">下</span>
+		</div>
+		<div class="lift-controller">
+			<span class="up">3</span>
+			<span class="up" onclick="lift_controller('3','up')">上</span>
+			<span class="down" onclick="lift_controller('3','down')">下</span>
+		</div>
+		<div class="lift-controller">
+			<span class="up">2</span>
+			<span class="up" onclick="lift_controller('2','up')">上</span>
+			<span class="down" onclick="lift_controller('2','down')">下</span>
+		</div>
+		<div class="lift-controller">
+			<span class="up">1</span>
+			<span class="up" onclick="lift_controller('1','up')">上</span>
+			<span class="up"></span>
+		</div>
+	</div>
+<!-- 15:0,14:22,13:44,12:66,11:88,10:110,9:132,8:154,7:176,6:198,5:220,4:242,3:264,2:286,1:308 -->
+	<div class="lift-dev lift-dev1">
+		<ul>
+			<li>15</li>
+			<li>14</li>
+			<li>13</li>
+			<li>12</li>
+			<li>11</li>
+			<li>10</li>
+			<li>9</li>
+			<li>8</li>
+			<li>7</li>
+			<li>6</li>
+			<li>5</li>
+			<li>4</li>
+			<li>3</li>
+			<li>2</li>
+		</ul>
+		<ul>
+			<li class="lift-box1" style="top:308px;"></li>
+		</ul>
+	</div>
+	<div class="lift-dev lift-dev2">
+		<ul>
+			<li>15</li>
+			<li>14</li>
+			<li>13</li>
+			<li>12</li>
+			<li>11</li>
+			<li>10</li>
+			<li>9</li>
+			<li>8</li>
+			<li>7</li>
+			<li>6</li>
+			<li>5</li>
+			<li>4</li>
+			<li>3</li>
+			<li>2</li>
+		</ul>
+		<ul>
+			<li class="lift-box2" style="top:308px"></li>
+		</ul>
+	</div>
+	<div class="lift-dev lift-dev3">
+		<ul>
+			<li>15</li>
+			<li>14</li>
+			<li>13</li>
+			<li>12</li>
+			<li>11</li>
+			<li>10</li>
+			<li>9</li>
+			<li>8</li>
+			<li>7</li>
+			<li>6</li>
+			<li>5</li>
+			<li>4</li>
+			<li>3</li>
+			<li>2</li>
+		</ul>
+		<ul>
+			<li class="lift-box3" style="top:308px"></li>
+		</ul>
+	</div>
+	<!-- <div class="lift-dev lift-dev4">
+		<ul>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+		<ul>
+			<li class="lift-box4"></li>
+		</ul>
+	</div> -->
+
+
+</body>
+</html>
