@@ -61,3 +61,8 @@
 .arrow-active{
 	color: #ff522f;
 }
+.inner{
+	width: 82px;
+	border: 1px solid #ccc;
+	margin-bottom: 10px;
+}
